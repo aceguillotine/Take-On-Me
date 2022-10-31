@@ -1,0 +1,24 @@
+#include "Color.h"
+
+int S[] = {Green, Green, Orange, Pink1, 0, Pink1, 0, Yellow, 0, Yellow, 0, Yellow, Blue, Blue, Purple, Pink2, Purple, Purple, Purple, Yellow, 0, Orange, 0, Green, 0, Green, 0, Green, Yellow, Yellow, Green, Yellow, Green, Green, Orange, Pink1, 0, Pink1, 0, Yellow, 0, Yellow, 0, Yellow, Blue, Blue, Purple, Pink2, Purple, Purple, Purple, Yellow, 0, Orange, 0, Green, 0, Green, 0, Green, Yellow, Yellow, Green, Yellow};
+
+int L = 64;
+double nds = 6;
+
+void setup() {
+  Tone();
+}
+
+void loop() {
+  noTone(6);
+}
+
+void Tone() {
+  for (int n = 0; n < L; n++) {
+    int nd = 1000 / nds;
+    tone(6, S[n], nd);
+    int d = nd * 1;
+    delay(d);
+    noTone(6);
+  }
+}
